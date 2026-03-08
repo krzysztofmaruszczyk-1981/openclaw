@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ['gcc', 'cmake', 'gnumake', 'sdl2', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'zlib']
+
+[phases.build]
+cmds = ['mkdir -p build', 'cd build && cmake .. && make']
+
+[start]
+cmd = './build/openclaw'
